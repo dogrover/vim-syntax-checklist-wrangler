@@ -7,12 +7,16 @@ if exists ("b:current_syntax")
     finish
 endif
 
+let b:current_syntax = "wrangler"
+
 " No keywords
 
-" Matches
-syntax match cwString '.\+' contained
+" No matches
 
 " Regions
-syn region cwSection start="^---" end="---$" transparent oneline
-syn region cwItem start="^\[ \]" end="$" oneline contains=cwString
+syn region cwSection start='^---' end='---$' oneline
+syn region cwItem start="^\[ \]" end="$" oneline
 
+" Highlighting
+hi def link cwSection Type
+hi def link cwItem    Statement

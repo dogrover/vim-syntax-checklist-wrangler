@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.cwl,*.cwt  setfiletype=wrangler
+au BufRead,BufNewFile *.cwl,*.cwt setfiletype wrangler
